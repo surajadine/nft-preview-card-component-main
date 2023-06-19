@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* variables */
+:root{
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --colour-blue:hsl(215, 51%, 70%);
+    --colour-cyan:hsl(178, 100%, 50%);
+    --colour-white:hsl(0, 0%, 100%);
+    --colour-line:hsl(215, 32%, 27%);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    font-size: 18px;
+    color: var(--colour-blue);
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: var(--bg-main);
+
+}
+/* main-card */
+.main-card{
+    width: min(87.5%,22rem);
+    padding: 1.5rem 1.6rem 2rem;
+    background: var(--bg-card);
+    border-radius: 15px;
+    margin: 9.5rem auto;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.5);
+}
+/* img-container */
+.img-container{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 300px;
+}
+/* main-img */
+.main-img{
+    width: 100%;
+    display: block;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+/* overlay */
+.overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: var(--colour-cyan);
+    border-radius: 10px;
+}
+/* view */
+.view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: none;
+}
+.img-container:hover .overlay{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.img-container:hover .overlay +.view{
+    display: block;
+}
+/* description */
+.title{
+    font-size: 1.4rem;
+    color: var(--colour-white);
+    margin: 1.5rem 0 0.75rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.text-description{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.eth-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 1.4rem;
+}
+.eth{
+    color: var(--colour-cyan);
+    font-weight: 600;
+}
+.info{
+    display: flex;
+    align-items: center;
+}
+.icon{
+    margin-right: 0.5rem;
+}
+/* creator info */
+.creator-info{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--colour-line);
+}
+.avatar{
+    border-radius: 50%;
+    width: 2rem;
+    height: auto;
+    margin-right: 1rem;
+}
+.creator-text{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.creator-name{
+    color: var(--colour-white);
+}
+.title:hover .creator-name:hover{
+    color:var(--colour-cyan);
+    cursor: pointer;
+}
